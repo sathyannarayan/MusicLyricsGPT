@@ -10,6 +10,8 @@ The model repository for training/finetuning medium-sized GPTs with 5000 iterati
 
 Train new models from scratch, or finetune pretrained checkpoints (e.g. biggest one currently available as a starting point would be the GPT-2 1.3B model from OpenAI).
 $ python .\data\lyrics\prepare.py
+
 $ python train.py config/train_lyrics.py --device=cpu --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 
 --max_iters=2000 --lr_decay_iters=2000 --dropout=0.0
+
 $ python .\sample.py --out_dir=out-lyrics --device='cpu'  --start="strange love"
